@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/ru.dm_dev.parakeet">
     <PreferenceCategory
         android:title="@string/settings_active_time_title"
         android:key="pref_active_time">
@@ -9,7 +10,7 @@
             android:dialogTitle="Выберите время начала работы"
             android:entries="@array/hours_settings_human_readable"
             android:entryValues="@array/hours_settings"
-            android:defaultValue="@string/pref_startactive_time_default" />
+            android:defaultValue="@string/pref_start_active_time_default" />
             />
         <ListPreference
             android:title="Время окончания"
@@ -51,4 +52,15 @@
         </PreferenceScreen>
 
     </PreferenceCategory>
+
+    <ru.dm_dev.parakeet.SeekBarPreference
+        android:key="pref_repeats"
+        android:title="@string/pref_repeat_title"
+        android:dialogMessage="@string/pref_repeat_dialog_message"
+        app:minValue="5"
+        app:maxValue="10"
+        android:persistent="true"
+        android:defaultValue="5"
+        />
+
 </PreferenceScreen>
