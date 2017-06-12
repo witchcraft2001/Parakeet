@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/settings_active_time_title"
+        android:key="pref_active_time">
+        <ListPreference
+            android:title="Время начала"
+            android:key="pref_start_active_time"
+            android:dialogTitle="Выберите время начала работы"
+            android:entries="@array/hours_settings_human_readable"
+            android:entryValues="@array/hours_settings"
+            android:defaultValue="@string/pref_startactive_time_default" />
+            />
+        <ListPreference
+            android:title="Время окончания"
+            android:dialogTitle="Выберите время окончания работы"
+            android:key="pref_end_active_time"
+            android:entries="@array/hours_settings_human_readable"
+            android:entryValues="@array/hours_settings"/>
+        <PreferenceScreen
+            android:key="pref_active_days_settings"
+            android:title="Дни работы">
+            <CheckBoxPreference
+                android:title="Понедельник"
+                android:key="pref_active_monday"
+                android:defaultValue="true"/>
+            <CheckBoxPreference
+                android:title="Вторник"
+                android:key="pref_active_tuesday"
+                android:defaultValue="true"/>
+            <CheckBoxPreference
+                android:title="Среда"
+                android:key="pref_active_wednesday"
+                android:defaultValue="true"/>
+            <CheckBoxPreference
+                android:title="Четверг"
+                android:key="pref_active_thursday"
+                android:defaultValue="true"/>
+            <CheckBoxPreference
+                android:title="Пятница"
+                android:key="pref_active_friday"
+                android:defaultValue="true"/>
+            <CheckBoxPreference
+                android:title="Суббота"
+                android:key="pref_active_saturday"
+                android:defaultValue="true"/>
+            <CheckBoxPreference
+                android:title="Воскресенье"
+                android:key="pref_active_sunday"
+                android:defaultValue="true"/>
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+</PreferenceScreen>
